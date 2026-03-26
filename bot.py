@@ -8,9 +8,9 @@ import os
 
 app = Client(
     "watermark_bot",
-    api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN
+    api_id=36014101,
+    api_hash=d4b9c4246a4a0d16e960677725e8ed8e,
+    bot_token=8715679380:AAEqVan2Zd4Carx2ILLs01AxTEb56rfqIKI
 )
 
 user_settings = {}
