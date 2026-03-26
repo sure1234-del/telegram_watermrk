@@ -111,16 +111,14 @@ async def process_and_send(client, message, input_path, output_path, settings):
     os.remove(input_path)
     os.remove(output_path)
     
-from pyrogram import idle
 import asyncio
-
-# START QUEUE WORKER
+from pyrogram import idle
 
 async def main():
-    asyncio.create_task(worker())
+    asyncio.create_task(worker())  # queue worker start
     await app.start()
     print("Bot Running...")
     await idle()
 
-if name == "main":
+if __name__ == "__main__":
     asyncio.run(main())
