@@ -1,9 +1,14 @@
+import asyncio
+import sys
+
+if sys.platform.startswith("linux"):
+    asyncio.set_event_loop_policy(asyncio.DefaultEventLoopPolicy())
+
 from pyrogram import Client, filters
 from config import *
 from database import *
 from video_processor import process_video
 from queue_manager import video_queue, worker
-import asyncio
 import os
 
 app = Client(
